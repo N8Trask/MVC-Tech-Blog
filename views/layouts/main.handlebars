@@ -4,36 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fund My Project!</title>
+    <title>Tech Blog</title>
     {{!--
-    <link rel="stylesheet" href="/css/jass.css">
-    <link rel="stylesheet" href="/css/style.css"> --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> --}}
+    {{!--
+    <link rel="stylesheet" href="/public/css/style.css"> --}}
 </head>
 
-<body>
-    <div class="flex-column justify-space-around">
-        <header class="display-flex justify-space-between align-center p-2">
+<body class="container-fluid">
+    <div>
+        <header>
+
+            {{#if logged_in}}
             <nav>
-                <a href="/">Home</a>
-
-                {{#if logged_in}}
-                <a href="/dashboard">Dashboard</a>
-                {{else}}
-                <a href="/login">Dashboard</a>
-                {{/if}}
-
-                {{#if logged_in}}
-                <button class="no-button" id="logout">Logout</button>
-                {{else}}
-                <a href="/login">Login</a>
-                {{/if}}
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a class="no-button" id="logout">Logout</a></li>
+                </ul>
             </nav>
+            {{else}}
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/login">Dashboard</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+            {{/if}}
+
             <h1>
                 <a href="/">The Tech Blog</a>
             </h1>
 
         </header>
-        <main class="container container-fluid mt-5">
+        <main class="container">
 
             {{{ body }}}
         </main>

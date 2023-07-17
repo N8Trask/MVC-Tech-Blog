@@ -1,7 +1,32 @@
-<div class="text-center">
-    <h2>{{title}}</h2>
-    <p>Posted by {{user.name}} on {{format_date date_created}}</p>
-    <h4>{{content}}</h4>
+<div data-id="{{this.id}}">
+    <div>
+        <h2>{{title}}</h2>
+        <p>Posted by {{user.name}} on {{format_date date_created}}</p>
+        <h4>{{content}}</h4>
+    </div>
+
+    {{#if logged_in}}
+    <div>
+        <button id="add-comment">Add Comment</button>
+    </div>
+
+    {{else}}
+    <div>
+        <button onclick="window.location.href='/login'">Add Comment</button>
+    </div>
+    {{/if}}
+
+    <div>
+        <form style="display: none" id="comment-form">
+            <div>
+                <label for="comment-content">Comment:</label>
+                <textarea id="comment-content" name="comment-content"></textarea>
+            </div>
+            <div>
+                <button id="submitBtn">Submit</button>
+            </div>
+        </form>
+    </div>
 
 
     <div>
@@ -12,3 +37,5 @@
         {{/each}}
     </div>
 </div>
+
+<script src="/js/comment.js"></script>

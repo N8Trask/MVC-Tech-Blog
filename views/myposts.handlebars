@@ -1,0 +1,30 @@
+<div data-id="{{this.id}}">
+    <h2>{{title}}</h2>
+    <p>Posted on {{format_date date_created}}</p>
+    <p>{{content}}</p>
+</div>
+
+<div id="form" style="display: none">
+    <form>
+        <label for="update-title">Title:</label>
+        <textarea id="update-title" rows="1" cols="50"> {{title}} </textarea>
+        <br>
+        <label for="update-content">Body:</label>
+        <textarea id="update-content" rows="10" cols="50">{{content}}</textarea>
+        <br>
+        <button id="submit-update" type="submit">Publish</button>
+    </form>
+</div>
+
+
+<div id="actionBtns">
+    <div>
+        <button id="action">Update Post</button>
+    </div>
+
+    <div>
+        <button id="delete-post">Delete Post</button>
+    </div>
+</div>
+
+<script src="/js/edit.js"></script>

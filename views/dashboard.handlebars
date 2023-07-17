@@ -1,0 +1,35 @@
+{{#if logged_in}}
+
+{{#if posts.length}}
+{{#each posts as |post|}}
+<article>
+    <h2>
+        <a href="/myposts/{{post.id}}">{{post.title}}</a>
+    </h2>
+</article>
+{{/each}}
+{{else}}
+<p>No posts yet!</p>
+{{/if}}
+<div id="actionBtns">
+    <button id="action">Create a new post</button>
+</div>
+
+
+<div id="form" style="display: none">
+    <form id="submit-post">
+        <label for="title">Title:</label>
+        <textarea id="title" rows="1" cols="50" placeholder="Enter title"></textarea>
+        <br>
+        <label for="content">Body:</label>
+        <textarea id="content" rows="10" cols="50" placeholder="Enter body content"></textarea>
+        <br>
+        <button type="submit">Publish</button>
+    </form>
+</div>
+
+{{else}}
+<a href='/login'>Login</a>
+{{/if}}
+
+<script src="/js/post.js"></script>
