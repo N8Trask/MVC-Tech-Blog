@@ -1,18 +1,6 @@
 [
     {
-        "content": "Hello World",
-        "date_created": "2019-01-01",
-        "created_by": 2,
-        "post_id": 1
-    },
-    {
-        "content": "Best blog post ever",
-        "date_created": "2023-05-01",
-        "created_by": 1,
-        "post_id": 2
-    },
-    {
-        "content": "Hello World",
+        "content": "Very interesting blog post",
         "date_created": "2019-01-01",
         "created_by": 2,
         "post_id": 1
@@ -30,19 +18,19 @@
         "post_id": 2
     },
     {
-        "content": "Hello World",
+        "content": "Incredbly useful blog post",
         "date_created": "2019-01-01",
         "created_by": 2,
         "post_id": 2
     },
     {
-        "content": "Best blog post ever",
+        "content": "Meh",
         "date_created": "2023-05-01",
         "created_by": 1,
         "post_id": 3
     },
     {
-        "content": "I love this blog",
+        "content": "I love coding",
         "date_created": "2023-05-01",
         "created_by": 1,
         "post_id": 3

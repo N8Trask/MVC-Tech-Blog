@@ -10,7 +10,6 @@ const commentBox = async (event) => {
 
 const submitFormHandler = async (event) => {
     event.preventDefault();
-    console.log('test');
     const content = document.querySelector('#comment-content').value.trim();
     const id = document.querySelector('[data-id]').dataset.id;
     if (content) {
